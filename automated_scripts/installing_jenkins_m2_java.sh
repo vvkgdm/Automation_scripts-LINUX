@@ -5,11 +5,11 @@ yum -y install java-1.8.0-openjdk
 
 #Installing MAVEN
 
-mkdir /opt/maven
-cd /opt/maven
+cd /opt/
 # downloading maven version 3.6.0
 wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
 tar -xvzf apache-maven-3.6.1-bin.tar.gz
+mv apache-maven-3.6.1-bin maven
 
 #Installing Jenkins
 echo JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.212.b04-1.el8_0.x86_64
