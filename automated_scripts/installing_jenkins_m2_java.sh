@@ -28,9 +28,9 @@ yum -y install jenkins
 echo -------------------------------------------------------------------------------------------------
 echo  EXPORTING ENVIORNMENTAL VARIABLES
 echo ------------------------------------------------------------------------------------------------
-echo"export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.amzn2.0.1.x86_64" >>~/.bash_profile
-echo"export M2_HOME=/opt/maven" >>~/.bash_profile
-echo"export M2=/opt/maven/bin" >>~/.bash profile
+echo "export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.amzn2.0.1.x86_64" >>~/.bash_profile
+echo "export M2_HOME=/opt/maven" >>~/.bash_profile
+echo "export M2=/opt/maven/bin" >>~/.bash profile
 echo -----------------------------------------------------------------------------------------------
 echo EXOPRTATION ENDED
 echo -----------------------------------------------------------------------------------------------
