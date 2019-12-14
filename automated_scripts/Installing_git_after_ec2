@@ -1,0 +1,10 @@
+#!/bin/bash
+sudo su -
+yum update -y
+yum install git -y
+mkdir /opt/git
+cd /opt/git
+git clone https://github.com/vvkgdm/Automation_scripts-LINUX
+cd /opt/git/Automation_scripts-LINUX/automated_scripts/
+chmod 700 installing_jenkins_m2_java.sh
+sh installing_jenkins_m2_java.sh
