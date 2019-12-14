@@ -100,6 +100,6 @@ gsutil mv /database/$YESTERDAY gs://regional-backup-bucket/database/nilgiri/$YES
 if [ ! "$MSG" ]; then
 echo -e "Dear Team, \n\nPlease find below backup status. \n<table border='1'><tr><th>Directory</th><th>Status</th></tr>$MSG</table>\n\n+gcpnilgiri" | mail -s "Nilgiri Daily Backup Status on $(date +%F)" ashok.pilla@spoors.in,bala.balam@spoors.in
 else
-echo -e "Dear Team, \n\nNilgiri Daily Backup is successful. \n\n+gcpnilgiri" | mail -s "Nilgiri Daily Backup Status on $(date +%F)" ashok.pilla@spoors.in, bala.balam@spoors.in
+echo -e "Dear Team, \n\nNilgiri Daily Backup is successful. \n\n+gcpnilgiri" | mail -s "Nilgiri Daily Backup Status on $(date +%F)" vivek.gdm@gmail.com
 fi
 
