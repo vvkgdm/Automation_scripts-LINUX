@@ -1,0 +1,77 @@
+=============================================================================
+installing java
+=============================================================================
+https://www.linode.com/docs/development/java/install-java-on-ubuntu-16-04/
+Install the “Main” repository with apt:
+
+sudo apt-get update
+
+Install OpenJDK 8:
+
+sudo apt-get install openjdk-8-jdk
+
+This package will run an installer for The OpenJDK 8, which is the latest LTS version available for Ubuntu 16.04 release.
+
+Verify that Java and the Java compiler have been properly installed:
+
+java -version
+----------------------------------------------------------------
+echo "JAVA_HOME=$(which java)" | sudo tee -a /etc/environment
+
+Reload your system’s environment variables:
+
+source /etc/environment
+
+Verify the variable was set correctly:
+
+echo $JAVA_HOME
+----------------------------------------------------------------------------
+=============================================================================
+installing maven
+=============================================================================
+https://www.techbeginner.in/2020/01/how-to-install-apache-maven-on-ubuntu.html
+Download Apache Maven
+
+To download the Apache Maven, You need to use the following commands.
+
+cd /tmp
+
+wget http://apachemirror.wuchna.com/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+
+Extract Apache Maven
+
+mkdir /opt/maven
+
+tar xzvf apache-maven-3.6.3-bin.tar.gz -C /opt/maven --strip-components=1
+
+Get Java Home
+
+Use the given commands for Java home.
+
+update-java-alternatives -l
+
+You should get output like this.
+
+/usr/lib/jvm/java-1.8.0-openjdk-amd64
+
+Environment for Apache Maven.
+
+You need to create file on given path with required parameter.
+
+vim /etc/profile.d/maven.sh
+
+paste the given param.
+
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export M2_HOME=/opt/maven
+export MAVEN_HOME=/opt/maven
+export PATH=${M2_HOME}/bin:${PATH}
+
+Update the permission of Apache Maven
+
+source /etc/profile.d/mavenenv.sh
+chmod +x /etc/profile.d/mavenenv.sh
+
+Check Version
+
+mvn --version
