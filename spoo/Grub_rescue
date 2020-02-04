@@ -1,0 +1,17 @@
+
+Locate the partition in which linux is present with the help of following technique
+
+grub rescue > ls
+(hd0) (hd0, msdos9)
+grub rescue > ls (hd0,msdos9)/
+grub rescue > ls (hd0,msdos8)/
+grub rescue > ls (hd0,msdos5)/ # suppose this is root and bootloader of linux
+grub rescue > ls (hd0,msdos5)/
+grub rescue > set root=(hd0,msdos5)
+grub rescue > set prefix=(hd0,msdos5)/boot/grub
+grub rescue > insmod normal
+grub rescue > normal
+Now, system's boot menu appears. Boot into linux.
+
+sudo update-grub
+sudo grub-install  /dev/sda # If the drive is
