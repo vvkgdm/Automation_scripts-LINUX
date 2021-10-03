@@ -6,6 +6,8 @@ echo INSTALLING JAVA
 echo ==============================================================================
 yum install java-11-openjdk -y
 yum insatll wget -y
+yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
+
 
 #Installing MAVEN
 echo =============================================================================
