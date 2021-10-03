@@ -4,7 +4,8 @@ yum install updates -y
 echo =============================================================================
 echo INSTALLING JAVA
 echo ==============================================================================
-yum install java-11-openjdk
+yum install java-11-openjdk -y
+yum insatll wget -y
 
 #Installing MAVEN
 echo =============================================================================
